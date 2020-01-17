@@ -12,6 +12,12 @@
   </body>
   <script>
     const testURL = `https://test.dev#clicked`;
-    console.log();
+    const positionofhash = testURL.indexOf("#") + 1;
+    const urlLength = testURL.length;
+    const slicedURL = testURL.slice(positionofhash,urlLength);
+    const hash = testURL.slice(testURL.indexOf(`#`) + 1, testURL.length);
+    console.log(urlLength, positionofhash);
+    console.log(slicedURL);
+    console.log(hash);
   </script>
 </html>
