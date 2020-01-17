@@ -11,6 +11,14 @@
     <p>Open the web inspector console to test.</p>
   </body>
   <script>
+    function getHeaderLinkMarkup(title, url) {
+      const link = getMyLinkMarkup(title,url);
+      const header = getMyHeaderMarkup(link);
+      return header;
+    }
+      console.log(getHeaderLinkMarkup(
+        `My Title`,`https://bing.com`
+      ));
     function getMyLinkMarkup(title, url) {
       return `<a href="${url}">${title}</a>`;
     }

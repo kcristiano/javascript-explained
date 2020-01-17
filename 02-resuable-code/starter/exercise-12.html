@@ -12,5 +12,17 @@
   </body>
   <script>
     // Place your code below this line, before the closing script tag
+    function getLogin() {
+        password = prompt(`whats your secret code word of the day`);
+        const correctPass = `snoopy`;
+        if (password === correctPass) {
+          alert(`Got it in 1! You are Logged In!`);
+          return true;
+        } else {
+          alert(`Incorrect, please try again!`);
+          return false;
+        }
+      }
+      console.log(getLogin());
   </script>
 </html>
