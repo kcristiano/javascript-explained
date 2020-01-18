@@ -12,5 +12,11 @@
   </body>
   <script>
     // Place your code below this line, before the closing script tag
+    function getTaxes(price){
+      const rate = 0.05;
+      tax_amount = price * rate;
+      return tax_amount;
+    }
+    console.log(getTaxes(100));
   </script>
 </html>

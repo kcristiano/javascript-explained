@@ -11,6 +11,18 @@
     <p>Open the web inspector console to test.</p>
   </body>
   <script>
+    //Above getExcerptMarkup(), create a function called getArticleMarkup() that takes
+    //the following parameters: title, url, excerpt, author .  Then inside of the function
+    //create a variable called markup that gets the value of getHeaderLinkMarkup() and adds
+    //to it the value of getExcerptMarkup() and finally adds to it the value of
+    //getAuthorMarkup() .  Then return all of that combined markup.
+    //Log getArticlelMarkup() to the console and pass it the correct parameters to test.
+    function getArticleMarkup(title, url, excerpt, author){
+      let markup = getHeaderLinkMarkup(title, url);
+      markup += getExcerptMarkup(excerpt);
+      markup += getAuthorMarkup(author);
+      return markup;
+    }
     function getExcerptMarkup(excerpt) {
       return `<div class="excerpt"><p>${excerpt}</p></div>`;
     }
@@ -28,5 +40,12 @@
     function getMyHeaderMarkup(title) {
       return `<h1>${title}</h1>`;
     }
+    console.log(
+        getArticleMarkup(
+        `title`,
+        `http://js.test`,
+        `Loren Ipsum`,
+        `Author`)
+        );
   </script>
 </html>
