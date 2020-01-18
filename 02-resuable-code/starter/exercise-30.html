@@ -11,6 +11,7 @@
     <p>Open the web inspector console to test.</p>
   </body>
   <script>
+    /*
     function getArticleMarkup(title, url, excerpt, author) {
       let markup = getHeaderLinkMarkup(title, url);
       markup += getExcerptMarkup(excerpt);
@@ -42,5 +43,30 @@
     function getMyHeaderMarkup(title) {
       return `<h1>${title}</h1>`;
     }
+    */
+    const getArticleMarkup = (title, url, excerpt, author) => {
+      let markup = getHeaderLinkMarkup(title, url);
+      markup += getExcerptMarkup(excerpt);
+      markup += getAuthorMarkup(author);
+      return markup;
+    };
+    const getExcerptMarkup = excerpt =>
+      `<div class="excerpt"><p>${excerpt}</p></div>`;
+    const getAuthorMarkup = author => `<p>By: ${author}</p>`;
+    const getHeaderLinkMarkup = (title, url) => {
+      const link = getMyLinkMarkup(title, url);
+      const header = getMyHeaderMarkup(link);
+      return header;
+    };
+    const getMyLinkMarkup = (title, url) => `<a href="${url}">${title}</a>`;
+    const getMyHeaderMarkup = title => `<h1>${title}</h1>`;
+    console.log(
+      getArticleMarkup(
+        `js Test`,
+        `https://js.test`,
+        `Excerpt Text here.`,
+        `Kevin Cristiano`
+      )
+    );
   </script>
 </html>
