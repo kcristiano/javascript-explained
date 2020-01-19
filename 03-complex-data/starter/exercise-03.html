@@ -12,10 +12,18 @@
   </body>
   <script>
     const user = {
-      id: 1,
-      username: `yourusername`,
-      loggedIn: true
-    };
+        id: 1,
+        username: `kcristiano`,
+        loggedIn: true
+      }
     // Place your code below this line, before the closing script tag
+    function sayHi(user) {
+      if (user.loggedIn == true) {
+        console.log(`Hi ${ user.username } !`);
+      } else {
+        console.log (`Please login`);
+      }
+      }
+    sayHi(user);
   </script>
 </html>

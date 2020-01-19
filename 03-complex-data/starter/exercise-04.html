@@ -13,16 +13,16 @@
   <script>
     const user = {
       id: 1,
-      username: `yourusername`,
-      loggedIn: true
-    };
-    function sayHi(user) {
-      if (user.loggedIn == true) {
-        console.log(`Hi ${user.username}!`);
-      } else {
-        console.log(`Please login!`);
+      username: `kcristiano`,
+      loggedIn: true,
+      sayHi: function () {
+       if (user.loggedIn == true) {
+          console.log(`Hi ${user.username}!`);
+        } else {
+          console.log(`Please login!`);
+        }
       }
     }
-    sayHi(user);
+    user.sayHi();
   </script>
 </html>
