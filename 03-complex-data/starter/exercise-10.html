@@ -33,5 +33,13 @@
       markup += `</a></h1>`;
       return markup;
     }
+    function getPostMarkup(post) {
+      let markup = `<article id ="${post.id}">`;
+      markup += getHeaderMarkup(post);
+      markup += getExcerptMarkup(post);
+      markup += `</article>`;
+      return markup;
+    }
+    console.log(getPostMarkup(post));
   </script>
 </html>
