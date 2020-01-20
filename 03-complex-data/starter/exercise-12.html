@@ -16,7 +16,10 @@
       error: `An error occured!`,
       success: `Success!`
     };
-
     // Place your code below this line, before the closing script tag
+    function getMessageMarkup(type){
+      return message[type];
+      }
+    console.log(getMessageMarkup(`notice`));
   </script>
 </html>

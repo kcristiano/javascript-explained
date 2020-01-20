@@ -32,5 +32,14 @@
       }
     ];
     // Place your code below this line, before the closing script tag
+    function getTitlesMarkup(posts){
+      markup = `<li>`;
+      posts.map(post => {
+        markup += `<h2><a href="/${post.slug}">${post.title}</a></h2>`;
+        markup += '</li>'
+    })
+    return markup;
+  }
+    console.log(getTitlesMarkup(posts));
   </script>
 </html>

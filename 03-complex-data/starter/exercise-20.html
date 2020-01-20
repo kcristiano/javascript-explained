@@ -25,12 +25,24 @@
         excerpt: `On a roll..`
       },
       {
-        id: 1,
+        id: 3,
         title: `Third Post`,
         slug: `third-post`,
         excerpt: `Keeping it going.`
       }
     ];
     // Place your code below this line, before the closing script tag
+    function getPostMarkup(posts) {
+        markup = `<div class="posts">\n`;
+        posts.map(post => {
+          markup += `<article class="post-${post.id}">\n`;
+          markup += `<h2>${post.title}</h2>\n`;
+          markup += `<p>${post.excerpt}</p>\n`;
+          markup += '</article>\n'
+        })
+        markup += `</div>`
+        return markup;
+      }
+      console.log(getPostMarkup(posts));
   </script>
 </html>

@@ -25,12 +25,16 @@
         excerpt: `On a roll..`
       },
       {
-        id: 1,
+        id: 3,
         title: `Third Post`,
         slug: `third-post`,
         excerpt: `Keeping it going.`
       }
     ];
     // Place your code below this line, before the closing script tag
+    function logTitles(posts) {
+    posts.map(post => console.log(post.title));
+    }
+    logTitles(posts);
   </script>
 </html>
