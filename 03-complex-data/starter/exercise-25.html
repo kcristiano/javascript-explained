@@ -15,23 +15,44 @@
       {
         id: 1,
         title: `Welcome to JS`,
-        cats: [`js`, `intro`]
+        cats: [`js`, `intro`],
+        url: `https://bing.com`,
+        excerpt: `my stuff`
       },
       {
         id: 2,
         title: `Using a Code Editor`,
-        cats: [`tools`, `intro`]
+        cats: [`tools`, `intro`],
+        url: `https://google.com`,
+        excerpt: `no one stuff`
       },
       {
         id: 3,
         title: `JavaScript Arrays`,
-        cats: [`js`]
+        cats: [`js`],
+        url: `https://yahoo.com`,
+        excerpt: `their stuff`
       },
       {
         id: 4,
         title: `More JS Practice`,
-        cats: [`js`, `practice`]
+        cats: [`js`, `practice`],
+        url: `https://duckduckgo.com`,
+        excerpt: `best stuff`
       }
     ];
+    const jsArticles = posts.filter(post => post.cats.includes(`js`));
+    function getPostMarkup(jsArticles) {
+        let markup = `<div class="posts">\n`;
+        posts.map(post => {
+          markup += `<article class="post-${post.id}">\n`;
+          markup += `<h2>${post.title}</h2>\n`;
+          markup += `<p>${post.excerpt}</p>\n`;
+          markup += '</article>\n'
+        })
+        markup += `</div>`
+        return markup;
+      }
+      console.log(getPostMarkup(jsArticles));
   </script>
 </html>

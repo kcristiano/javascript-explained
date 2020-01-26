@@ -20,6 +20,13 @@
         excerpt: `An introduction`
       },
       {
+        id: 2,
+        title: `Welcome to php`,
+        cats: [`php`, `intro`],
+        url: `welcome-to-php`,
+        excerpt: `An introduction to php`
+      },
+      {
         id: 3,
         title: `JavaScript Arrays`,
         cats: [`js`],
@@ -48,5 +55,6 @@
       return markup;
     }
     // Place your code below this line, before the closing script tag
+    console.log(getPostMarkup(nonJSArticles));
   </script>
 </html>
