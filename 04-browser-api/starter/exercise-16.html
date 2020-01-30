@@ -15,5 +15,7 @@
   <script>
     const header = title => `<h2>${title}</h2>`;
     // Place your code below this line
+    const container = document.querySelector(`#app`);
+    container.insertAdjacentHTML(`beforeend`, header(`My Header`));
   </script>
 </html>

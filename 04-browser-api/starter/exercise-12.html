@@ -31,5 +31,10 @@
   </body>
   <script>
     // Place your code below this line
+    const menuLinks = document.querySelectorAll(`.menu li a`);
+    const menuArray = Array.from(menuLinks);
+    menuArray.map(menuLink => {
+        console.log(menuLink.innerText);
+      });
   </script>
 </html>

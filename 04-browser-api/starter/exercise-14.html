@@ -15,5 +15,7 @@
   <script>
     const staticHeader = () => `<h2>Static Header</h2>`;
     // Place your code below this line
+    const container = document.querySelector(`#app`);
+    container.insertAdjacentHTML(`beforeend`, staticHeader());
   </script>
 </html>
