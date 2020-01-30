@@ -18,13 +18,19 @@
     </div>
   </body>
   <script>
-    const links = document.querySelectorAll(`a`);
-    const linksArray = Array.from(links);
+   const links = document.querySelectorAll(`a`);
+   const linksArray = Array.from(links);
 
     // Place your code below this line
     function logTitle(e) {
         e.preventDefault();
-        console.log(logTitle.innerText);
+        console.log(this.innerText);
       }
+      //during discussion group
+      //linksArray.forEach(link => link.addEventListener(`click`, logTitle));
+      // from excersize 19
+      linksArray.map(link => {
+          link.addEventListener(`click`, logTitle);
+        });
   </script>
 </html>
