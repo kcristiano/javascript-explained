@@ -40,6 +40,7 @@
   <script>
     // Place your code below this line
 
+    const button = document.querySelector(`button.open-modal`);
     const modal = () => `
         <div class="overlay">
           <div class="modal">
@@ -50,5 +51,10 @@
           </div>
         </div>
       `;
+    function openModal( e) {
+      const body = document.querySelector(`body`);
+      body.insertAdjacentHTML(`beforeend`, modal());
+    }
+    button.addEventListener(`click`, openModal);
   </script>
 </html>

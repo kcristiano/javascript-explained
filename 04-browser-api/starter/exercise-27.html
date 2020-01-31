@@ -36,8 +36,26 @@
       <p>Open the <a href="#">web inspector</a> console to test.</p>
       <p><button class="open-modal">Open Modal</button></p>
     </div>
+    </div>
   </body>
   <script>
     // Place your code below this line
+    /*
+    function modal() {
+      const markup = document.querySelector(`class`);
+      return markup;
+    }
+    console.log(modal);
+*/
+    const modal = () => `
+      <div class="overlay">
+        <div class="modal">
+          <button class="close-modal">
+            Close
+          </button>
+          <h1>My Modal!</h1>
+        </div>
+      </div>
+    `;
   </script>
 </html>

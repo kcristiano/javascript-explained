@@ -25,5 +25,18 @@
   </body>
   <script>
     // Place your code below this line
+    const video = document.querySelector(`video`);
+    const playButton = document.querySelector(`#play`);
+    const pauseButton = document.querySelector(`#pause`);
+
+    function playVideo(e) {
+      video.play();
+    }
+    function pauseVideo(e) {
+      video.pause();
+    }
+
+    playButton.addEventListener(`click`,playVideo);
+    pauseButton.addEventListener(`click`,pauseVideo);
   </script>
 </html>

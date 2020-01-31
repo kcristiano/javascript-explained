@@ -37,6 +37,7 @@
   <script>
     // Place your code below this line
     const openButton = document.querySelector(`.toggle-modal`);
+    const closeButton = document.querySelector(`#modal .toggle-modal`);
 
     function toggleModal(e) {
       const modal = document.querySelector(`#modal`);
@@ -44,5 +45,6 @@
     }
 
     openButton.addEventListener(`click`, toggleModal);
+    closeButton.addEventListener(`click`, toggleModal)
   </script>
 </html>

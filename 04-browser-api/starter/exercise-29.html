@@ -41,23 +41,34 @@
     const button = document.querySelector(`button.open-modal`);
 
     const modal = () => `
-        <div class="overlay">
-          <div class="modal">
-            <button class="close-modal">
-              Close
-            </button>
-            <h1>My Modal!</h1>
+          <div class="overlay">
+            <div class="modal">
+              <button class="close-modal">
+                Close
+              </button>
+              <h1>My Modal!</h1>
+            </div>
           </div>
-        </div>
-      `;
-
+        `;
     // Place your code below this line
 
     function openModal(e) {
       const body = document.querySelector(`body`);
       body.insertAdjacentHTML(`beforeend`, modal());
+      // Why move into function?
+      const closeButton = document.querySelector(`.close-modal`);
+      closeButton.addEventListener(`click`, removeModal);
     }
 
     button.addEventListener(`click`, openModal);
+
+    function removeModal(e) {
+      const button = document.querySelector(`.close-modal`);
+      button.removeEventListener(`click`, removeModal);
+
+      // why in function?
+      const modal = document.querySelector(`.overlay`);
+      modal.remove();
+    }
   </script>
 </html>
