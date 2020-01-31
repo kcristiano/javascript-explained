@@ -25,5 +25,25 @@
   </body>
   <script>
     // Place your code below this line
+/* Mine
+    const paragraphs = document.querySelectorAll(`p`);
+    const paragraphsArray = Array.from(paragraphs);
+    function logParent( e ) {
+      console.log(this.parentNode);
+    }
+    paragraphsArray.map(paragraphs => {
+        paragraphs.addEventListener(`mouseover`, logParent);
+      });
+*/
+
+      const paragraphs = Array.from(document.querySelectorAll(`p`));
+
+        function logParent(e) {
+          console.log(this.parentNode);
+        }
+
+        paragraphs.map(p => p.addEventListener(`mouseover`, logParent));
+
+    //paragraphs.addEventListener(`mousemove`, logParent);
   </script>
 </html>

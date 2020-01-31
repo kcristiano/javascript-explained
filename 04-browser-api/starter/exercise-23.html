@@ -19,10 +19,11 @@
   </body>
   <script>
     // Place your code below this line
-
+    const firstLink = document.querySelector(`a`);
     function logMousePosition(e) {
       e.preventDefault();
       console.log(e);
     }
+    firstLink.addEventListener(`mousemove`, logMousePosition);
   </script>
 </html>
