@@ -20,7 +20,13 @@
   <script>
     const links = document.querySelectorAll(`a`);
     const linksArray = Array.from(links);
-
     // Place your code below this line
+    function logLink(e) {
+      e.preventDefault();
+      console.log(this.href);
+    }
+    linksArray.map(link => {
+        link.addEventListener(`click`, logLink);
+      });
   </script>
 </html>
